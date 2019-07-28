@@ -1,52 +1,75 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { Component } from 'react'
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import { navigate, Link } from 'gatsby'
+import { TimelineMax, Power1 } from 'gsap'
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
+import { globalHistory } from "@reach/router"
+import "./normalize.css"
+import "./layout.scss"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+class Layout extends Component {
+  constructor(props) {
+    super(props);
+
+    this.location = parseInt(globalHistory.location.pathname.replace("/", ""), 10) || 0;
+    this.minPage = 1;
+    this.maxPage = 9;
+    this.timeline = new TimelineMax({ paused: true });
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.navigate);
+    const main = document.querySelector('main');
+    const elements = document.querySelectorAll('main > *');
+    this.timeline
+        .from(main, 0, { opacity: 0, autoAlpha: 0 }, 0.125)
+        .staggerFrom(elements, 0.375, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 0.0625);
+    this.timeline.play();
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.navigate);
+  }
+
+  navigate = ({ keyCode }) => {
+    if (keyCode === 37 && this.location <= this.minPage) {
+      return false;
+    } else if (keyCode === 39 && this.location >= this.maxPage) {
+      return false;
+    } else if (keyCode === 39) {
+      navigate(`/${this.location + 1}`);
+    } else if (keyCode === 37) {
+      navigate(`/${this.location - 1}`);
     }
-  `)
+  };
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+  render() {
+    const { children, title } = this.props
+
+    return (
+      <section>
+        <Header siteTitle={title} />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+        <nav>
+          { this.location > this.minPage ?
+            <Link to={`/${this.location - 1}/`}>⬅️ Poprzedni slajd</Link>
+          : null }
+          { this.location > this.minPage && this.location < this.maxPage ?
+            ` ⚫ `
+          : null }
+          { this.location < this.maxPage ?
+            <Link to={`/${this.location + 1}/`}>Następny slajd ➡️</Link>
+          : null }
+        </nav>
+        <Footer />
+      </section>
+    )
+  }
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
