@@ -26,20 +26,20 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-18801d1dba45b79a6d6b.js"
+    "url": "webpack-runtime-1ab4a14c8de731b8b71d.js"
   },
   {
-    "url": "app-830851e8f86b92320b3b.js"
+    "url": "app-f0ee0027e22bc81bd938.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-af3280a58e8490a82333.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-8554bc98e03afc3019eb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "55ffb2444ef9da1714da415b457bfd71"
+    "revision": "6ed5d581ebbb47037cd5c96dde49e6a6"
   },
   {
-    "url": "styles.983267e4f816f7202fc7.css"
+    "url": "styles.d8de0d89d532ffb4bd3e.css"
   },
   {
     "url": "google-fonts/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gfD_g.woff2",
@@ -54,21 +54,21 @@ self.__precacheManifest = [
     "revision": "20f97c00e6ed7cf6dd254348adafbc03"
   },
   {
-    "url": "styles-e0c0da743c46bb33c48a.js"
+    "url": "1-c536ee8e739cb14dce0f.js"
   },
   {
-    "url": "1-38e42093dec2847d4d45.js"
+    "url": "component---src-pages-404-js-3290cffa7b87e4eaf338.js"
   },
   {
-    "url": "component---src-pages-404-js-688112b9dda25894c247.js"
+    "url": "styles-a2649a2a7017d2125c48.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "aaaa50f73cc48e5077781a2eea81c204"
+    "revision": "f7c7d6ff2fc993e7800b0dec168a1c9b"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "bbb5035672b44e827b7f66f995d56ed0"
+    "revision": "b55a5fed083266c3c94fb7da62921557"
   },
   {
     "url": "manifest.webmanifest",
@@ -94,7 +94,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/graphql/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -166,7 +166,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/graphql${pathname}`
+        return `${pathname}`
       } else {
         return pathname
       }

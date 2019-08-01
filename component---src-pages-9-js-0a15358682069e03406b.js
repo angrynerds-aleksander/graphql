@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{204:function(e,a,t){"use strict";t.r(a);var n=t(0),r=t.n(n),c=t(210),i=t(209),o=t(214);a.default=function(){return r.a.createElement(c.a,{title:"9"},r.a.createElement(i.a,{title:"Wprowadzenie"}),r.a.createElement("h1",null,"Dyrektywy"),r.a.createElement("p",null,"Na podstawie wprowadzonych argumentów, możemy decydować jakie dane pobrać, a jakie nie"),r.a.createElement(o.a,{src:"directives.png"}))}}}]);
+//# sourceMappingURL=component---src-pages-9-js-0a15358682069e03406b.js.map
