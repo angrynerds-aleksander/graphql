@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{198:function(e,a,n){"use strict";n.r(a);var t=n(0),r=n.n(t),c=n(210),l=n(209),o=n(214);a.default=function(){return r.a.createElement(c.a,{title:"4"},r.a.createElement(l.a,{title:"Wprowadzenie"}),r.a.createElement("h1",null,"Zapytania"),r.a.createElement("p",null,"Najprościej mówiąc, GraphQL polega na tworzeniu zapytań o konkretne pola na obiektach"),r.a.createElement(o.a,{src:"query.png"}))}}}]);
+//# sourceMappingURL=component---src-pages-4-js-3798286e5701a9226ad4.js.map

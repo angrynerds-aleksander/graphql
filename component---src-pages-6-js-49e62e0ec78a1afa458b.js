@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{201:function(e,a,n){"use strict";n.r(a);var t=n(0),l=n.n(t),r=n(210),c=n(209),i=n(214);a.default=function(){return l.a.createElement(r.a,{title:"6"},l.a.createElement(c.a,{title:"Wprowadzenie"}),l.a.createElement("h1",null,"Aliasy"),l.a.createElement("p",null,"Zapytania możemy przypisywać do różnych nazw"),l.a.createElement(i.a,{src:"aliases.png"}))}}}]);
+//# sourceMappingURL=component---src-pages-6-js-49e62e0ec78a1afa458b.js.map
