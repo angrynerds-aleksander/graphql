@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout title="2">
     <SEO title="Wprowadzenie" />
       <h1>GraphQL vs REST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
@@ -21,4 +21,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page

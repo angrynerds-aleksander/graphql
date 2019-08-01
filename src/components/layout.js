@@ -14,7 +14,7 @@ class Layout extends Component {
 
     this.location = parseInt(globalHistory.location.pathname.replace("/", ""), 10) || 0;
     this.minPage = 1;
-    this.maxPage = 9;
+    this.maxPage = 11;
     this.timeline = new TimelineMax({ paused: true });
   }
 

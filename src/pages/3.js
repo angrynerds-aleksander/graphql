@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout title="3">
     <SEO title="Wprowadzenie" />
     <h1>Podział GraphQL</h1>
@@ -13,8 +13,8 @@ const SecondPage = () => (
     <p>Wskazują, skąd GraphQl ma pobrać dane do konkretnego zapytania</p>
     <h2>Schema</h2>
     <p>Schema opisuje strukturę i typy danych w API, a także tworzy z niej dokumentacje API</p>
-    <a style={{ marginTop: '2em', display: 'block' }} href="https://www.graphqlbin.com/v2/6RQ6TM" target="_blank">GraphQL Playground</a>
+    <a style={{ marginTop: '2em', display: 'block' }} href="https://lucasconstantino.github.io/graphiql-online/" target="_blank">GraphiQL Online</a>
   </Layout>
 )
 
-export default SecondPage
+export default Page

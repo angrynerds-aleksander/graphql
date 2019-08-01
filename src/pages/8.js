@@ -2,13 +2,15 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "../components/image"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout title="8">
     <SEO title="Wprowadzenie" />
-    <h1>Dyrektywy</h1>
-    <p>Na podstawie wprowadzonych argumentów, możemy decydować jakie dane pobrać, a jakie nie</p>
+    <h1>Zmienne</h1>
+    <p>Oczywiście w zapytaniach możemy używać zmiennych</p>
+    <Image src="variables.png" />
   </Layout>
 )
 
-export default SecondPage
+export default Page

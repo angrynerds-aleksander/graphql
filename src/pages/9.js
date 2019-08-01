@@ -2,13 +2,15 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "../components/image"
 
-const SecondPage = () => (
+const Page = () => (
   <Layout title="9">
     <SEO title="Wprowadzenie" />
-    <h1>Mutacje</h1>
-    <p>GraphQL skupia się głównie na pobieraniu danych, ale bez problemu możemy za pomocą GraphQL także zmieniać dane w bazie</p>
+    <h1>Dyrektywy</h1>
+    <p>Na podstawie wprowadzonych argumentów, możemy decydować jakie dane pobrać, a jakie nie</p>
+    <Image src="directives.png" />
   </Layout>
 )
 
-export default SecondPage
+export default Page
