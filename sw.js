@@ -26,17 +26,17 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-f35abdd8bb23fc3131bf.js"
+    "url": "webpack-runtime-cc77427dfac9d5f8d8af.js"
   },
   {
-    "url": "app-f0ee0027e22bc81bd938.js"
+    "url": "app-b88cdfedf82c07ce6830.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-8554bc98e03afc3019eb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "89f2720f302d90b74a721ef0cf4eda71"
+    "revision": "bba8d987dfdbf3f973195327545ec81b"
   },
   {
     "url": "styles.d8de0d89d532ffb4bd3e.css"
@@ -53,18 +53,18 @@ self.__precacheManifest = [
     "url": "1-c536ee8e739cb14dce0f.js"
   },
   {
-    "url": "component---src-pages-404-js-9d32c44f94de0f6a10be.js"
+    "url": "component---src-pages-404-js-7ca7252f632491cfc341.js"
   },
   {
     "url": "styles-a2649a2a7017d2125c48.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "a756c21b82f3c5c3cc3f6e7b8bae384a"
+    "revision": "ea5359de1c9a3deefb02029890fc3baf"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "5993a6ecad082955c42b9c270dce8846"
+    "revision": "6d3a13c00406178dc3307e5a59c05d2e"
   },
   {
     "url": "manifest.webmanifest",
@@ -90,7 +90,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/graphql/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -162,7 +162,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `${pathname}`
+        return `/graphql${pathname}`
       } else {
         return pathname
       }
