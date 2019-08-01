@@ -41,9 +41,9 @@ class Layout extends Component {
     } else if (keyCode === 39 && this.location >= this.maxPage) {
       return false;
     } else if (keyCode === 39) {
-      navigate(`/graphql/${this.location + 1}`);
+      navigate(`/${this.location + 1}/`);
     } else if (keyCode === 37) {
-      navigate(`/graphql/${this.location - 1}`);
+      navigate(`/${this.location - 1}/`);
     }
   };
 
@@ -56,13 +56,13 @@ class Layout extends Component {
         <main>{children}</main>
         <nav>
           { this.location > this.minPage ?
-            <Link to={`/graphql/${this.location - 1}/`}>⬅️ Poprzedni slajd</Link>
+            <Link to={`/${this.location - 1}/`}>⬅️ Poprzedni slajd</Link>
           : null }
           { this.location > this.minPage && this.location < this.maxPage ?
             ` ⚫ `
           : null }
           { this.location < this.maxPage ?
-            <Link to={`/graphql/${this.location + 1}/`}>Następny slajd ➡️</Link>
+            <Link to={`/${this.location + 1}/`}>Następny slajd ➡️</Link>
           : null }
         </nav>
         <Footer />

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { navigate } from 'gatsby';
+import { navigate, Link } from 'gatsby';
 
 class Index extends Component {
   componentDidMount() {
-    navigate(`/graphql/1`, { replace: true });
+    navigate(`/1/`, { replace: true });
   }
   render() {
-    return <div />;
+    return <div>
+      <Link to='/1/'>Następny slajd ➡️</Link>
+    </div>;
   }
 }
 
