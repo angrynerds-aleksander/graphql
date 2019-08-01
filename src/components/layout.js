@@ -12,7 +12,7 @@ class Layout extends Component {
   constructor(props) {
     super(props);
 
-    this.location = parseInt(globalHistory.location.pathname.replace("/graphql/", ""), 10) || 0;
+    this.location = parseInt(globalHistory.location.pathname.replace( /^\D+/g, ''), 10) || 0;
     this.minPage = 1;
     this.maxPage = 11;
     this.timeline = new TimelineMax({ paused: true });
