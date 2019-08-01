@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{200:function(e,t,a){"use strict";a.r(t);var n=a(0),r=a.n(n),c=a(210),l=a(209),u=a(214);t.default=function(){return r.a.createElement(c.a,{title:"5"},r.a.createElement(l.a,{title:"Wprowadzenie"}),r.a.createElement("h1",null,"Argumenty"),r.a.createElement("p",null,"W zapytaniach możemy wykorzystywać argumenty"),r.a.createElement(u.a,{src:"arguments.png"}))}}}]);
-//# sourceMappingURL=component---src-pages-5-js-8cc2d5d7cadb9c9ae4a0.js.map

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{194:function(e,a,n){"use strict";n.r(a);var t=n(0),i=n.n(t),r=n(210),c=n(209),l=n(214);a.default=function(){return i.a.createElement(r.a,{title:"10"},i.a.createElement(c.a,{title:"Wprowadzenie"}),i.a.createElement("h1",null,"Mutacje"),i.a.createElement("p",null,"GraphQL skupia się głównie na pobieraniu danych, ale bez problemu możemy za pomocą GraphQL także zmieniać dane w bazie"),i.a.createElement(l.a,{src:"mutations.png"}))}}}]);
-//# sourceMappingURL=component---src-pages-10-js-66a1f7f3222b1c29b18a.js.map

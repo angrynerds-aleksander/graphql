@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{203:function(e,a,n){"use strict";n.r(a);var t=n(0),c=n.n(t),i=n(210),l=n(209),r=n(214);a.default=function(){return c.a.createElement(i.a,{title:"8"},c.a.createElement(l.a,{title:"Wprowadzenie"}),c.a.createElement("h1",null,"Zmienne"),c.a.createElement("p",null,"Oczywiście w zapytaniach możemy używać zmiennych"),c.a.createElement(r.a,{src:"variables.png"}))}}}]);
-//# sourceMappingURL=component---src-pages-8-js-19881160e8d835a8b081.js.map
