@@ -4,6 +4,7 @@ module.exports = {
     description: `Wprowadzenie do języka GraphQL`,
     author: `Aleksander Niedźwiedź @ Angry Nerds`,
   },
+  pathPrefix: "/graphql",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -33,7 +34,7 @@ module.exports = {
         fonts: [
           {
             family: `Montserrat`,
-            variants: [`300`, `400`, `600`],
+            variants: [`300`, `400`],
             subsets: [`latin-ext`]
           },
         ],
